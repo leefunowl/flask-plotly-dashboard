@@ -1,0 +1,17 @@
+#filter_1 {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    color: #f50000;
+}
+
+iframe {
+	width: 1200px;
+	height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+	justify-content: center;
+}
+
+.parent { display: flex; }

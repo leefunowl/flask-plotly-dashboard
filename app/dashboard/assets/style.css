@@ -1,0 +1,29 @@
+#nav_panel {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    /* color: #f50000; */
+    margin: auto;
+    text-align: center;
+
+}
+
+.nav_buttom {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.main_buttom {
+	color: white;
+	font-size: 16px;
+	border-radius: 8px;
+	background-color: #5bc0de;
+	transition-duration: 0.3s;
+	border:#5bc0de;
+	padding: 10px 24px;
+}
+
+.main_buttom:hover {
+  background-color: #ffffff;
+  color: #5bc0de;
+}
