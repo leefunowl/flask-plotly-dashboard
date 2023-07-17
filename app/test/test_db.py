@@ -52,7 +52,7 @@ def test_data_insertion(db_init, Base_reflection):
         assert rows_count != 0
 
     # Test data
-    for file in ['BLOCK', 'CLERKSHIP', 'EVAL', 'LOCATION', 'QUESTION']:
+    for file in ['BLOCK', 'DEPARTMENT', 'EVAL', 'LOCATION', 'QUESTION']:
         _df = pd.read_csv(os.path.join(config.RAW_TEST_DATA_DIR, file + '.csv'), on_bad_lines='skip')
         _df.to_sql(name = file, con = engine, if_exists = 'append', index = False)
         table_model = Base_reflected.classes[file]

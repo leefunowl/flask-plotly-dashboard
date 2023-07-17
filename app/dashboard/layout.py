@@ -20,53 +20,18 @@ def layout():
                 [
                     html.Div(
                         [
-                            html.Center(html.P(children='''Select the Type of Report''')),
+                            html.Center(html.P(children='''Select figure #''')),
                             dcc.Dropdown(
-                                id = 'filter_1',
-                                options = [{'label': 'Sample', 'value': 'Sample'}],
-                                value = ''
+                                id = 'question_num_filter',
+                                options = [
+                                    {'label': i, 'value': i} for i in range(1, 5)
+                                ],
+                                value = 1
                             )
                         ],
                         className='nav_buttom',
                         style = {'width': '17%', 'display': 'inline-block'}
                     ),
-                    
-                    html.Div(
-                        [
-                            html.Center(html.P(id = 'filter_2_title')),
-                            dcc.Dropdown(id = 'filter_2')
-                        ],
-                        className='nav_buttom',
-                        style = {'width': '23%', 'display': 'inline-block'}
-                    ),
-                        
-                    html.Div(
-                        [
-                            html.Center(html.P(id = 'filter_3_title')),
-                            dcc.Dropdown(id = 'filter_3')                        
-                        ],
-                        id = 'filter_3_div',
-                        className='nav_buttom'
-                    ),
-                            
-                    html.Div(
-                        [
-                            html.Center(html.P(id = 'filter_4_title')),
-                            dcc.Dropdown(id = 'filter_4')                        
-                        ],
-                        id = 'filter_4_div',
-                        className='nav_buttom',
-                        style = {'width': '15%', 'display': 'inline-block'}
-                    ),
-                        
-                    html.Div(
-                        [
-                            html.Center(html.P(children=''' ''')),
-                            html.Button(id = 'submit-button-state', n_clicks = 0, children = 'View report', className = 'main_buttom')
-                        ],
-                        id = 'view_report',
-                        className='nav_buttom',
-                        style = {'width': '15%', 'display': 'inline-block', 'white-space': 'pre'})
                 ],
                 
                 id = 'nav_panel',
@@ -75,8 +40,7 @@ def layout():
             html.Div(
                 [
                     html.Br(), html.Br(),
-                    html.Div(id = 'sce_text'),
-                    html.Center(dcc.Graph(id='sce_graph'))
+                    html.Center(dcc.Graph(id='graph'))
                 ],
                 id = 'main_graph'
             )
